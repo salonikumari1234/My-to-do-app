@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1573164574572-3d1b86db7998?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fHRhc2slMjBtYW5hZ2V8ZW58MHx8fHwxNjQ3NjQ1Mjc3&ixlib=rb-1.2.1&q=80&w=1080'); /* Background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the image */
+            background-color: #6B5B9A; /* Fallback color for older browsers */
+            background-image: url(/images/background.jpeg);
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Ensure the body has a minimum height */
+            height: 100vh; /* Set height to full viewport */
+            width: 100%; /* Set width to full viewport */
+            overflow-x: hidden; /* Hides horizontal scrollbar */
+            
+        }        
+        .container {
+            min-height: 100vh; /* Full height */
+            display: flex;
+            margin-left: 350px;
+            justify-content:center;
+            align-items: center;
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px; /* Set max width */
+        }
+        h2 {
+            font-size: 1.5rem; /* Increase heading size */
+        }
+        .submit {
+            background-color: #4F46E5; /* Tailwind's indigo-600 */
+            color: white;
+        }
+        .submit:hover {
+            background-color: #3730A3; /* Tailwind's indigo-700 on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="login-container">
+            <h2 class="text-center mb-4">Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginUsername">Username:</label>
+                    <input type="text" id="loginUsername" name="loginUsername" class="form-control" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" class="form-control" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-block submit">Login</button>
+                <p id="loginMessage" class="text-danger text-center"></p>
+            </form>
+            <p class="text-center">Don't have an account? <a href="#" id="showSignUp" class="text-indigo-600">Sign Up</a></p>
+        </div>
+
+        <div class="form-container" id="signup-container" style="display: none;">
+            <h2 class="text-center mb-4">Sign Up</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">Username:</label>
+                    <input type="text" id="signupUsername" name="signupUsername" class="form-control" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email:</label>
+                    <input type="email" id="signupEmail" name="signupEmail" class="form-control" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password:</label>
+                    <input type="password" id="signupPassword" name="signupPassword" class="form-control" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-block submit">Sign Up</button>
+                <p id="signupMessage" class="text-danger text-center"></p>
+            </form>
+            <p class="text-center">Already have an account? <a href="#" id="showLogin" class="text-indigo-600">Login</a></p>
+        </div>
+    </div>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>
